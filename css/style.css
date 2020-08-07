@@ -1,0 +1,25 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.heading{
+    padding :50px;
+    text-align: center;
+}
+.card-1{
+    text-align :center
+}
+
+.card {
+    display:inline-block;
+    width:100px;
+    height:100px;
+    background-color: pink;
+    cursor: pointer;
+}
+
+.card:hover{
+    color:yellow;
+}
