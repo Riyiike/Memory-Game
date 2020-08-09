@@ -47,5 +47,7 @@ background-color: red;
     background-color: orange;
 }
 
-.color{
-    background-color: grey;
+.color-hidden{
+    background-color: #eeee;
+    /* display: hidden; */
+}
