@@ -23,3 +23,29 @@
 .card:hover{
     color:yellow;
 }
+
+.red{
+background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.yellow{
+    background-color:yellow;
+}
+.green{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.color{
+    background-color: grey;
