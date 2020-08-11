@@ -21,5 +21,40 @@
 }
 
 .card:hover{
-    color:yellow;
+    box-shadow: black;
+}
+
+.red{
+background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.yellow{
+    background-color:yellow;
+}
+.green{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.color-hidden{
+    background-color: #eeee;
+    /* display: hidden; */
+}
+.card.done{
+    cursor:default;
+}
+
+.card.done:hover{
+    cursor: default;
 }
