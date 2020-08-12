@@ -2,6 +2,16 @@ let clickedCard = null;
 let preventClick= false;
 let combosFound = 0;
 
+const  colors = [
+    'pink',
+    'yellow',
+    'red',
+    'green',
+    'blue',
+    'orange',
+    
+]
+
 // When i click on a card callback this function
 function onCardClicked(e) {
     const target = e.currentTarget;

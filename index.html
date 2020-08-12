@@ -3,31 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mix-Match Memoery Game </title>
+    <title>Mix-Match Memory Game </title>
     <link rel ="stylesheet" href ="./css/style.css"/>
 </head>
 <body>
     <div class ="wrapper">
+        
         <h1 class ="heading">
             MIX-MATCH!!
         </h1>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Move(s)
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+
         <div class ="card-1">
-            <div  data-color = "blue" class ="card blue color-hidden" onclick = "onCardClicked(event)"></div>
-            <div data-color = "orange" class ="card orange color-hidden"onclick = "onCardClicked(event)"></div>
-            <div data-color = "pink" class ="card pink color-hidden"onclick = "onCardClicked(event)"></div>
-            <div data-color = "red" class ="card red color-hidden"onclick = "onCardClicked(event)"></div>
-        </div>
-        <div class ="card-1">
-            <div data-color = "red" class ="card red color-hidden"onclick = "onCardClicked(event)"></div>
-            <div data-color = "green" class ="card green color-hidden"onclick = "onCardClicked(event)" ></div>
-            <div data-color = "yellow" class ="card yellow color-hidden"onclick = "onCardClicked(event)"></div>
-            <div data-color = "orange" class ="card orange color-hidden"onclick = "onCardClicked(event)"></div>
-        </div>
-        <div class ="card-1">
-            <div data-color = "pink" class ="card pink color-hidden"onclick = "onCardClicked(event)"></div>
-            <div data-color = "blue" class ="card blue color-hidden"onclick = "onCardClicked(event)"></div>
-            <div data-color = "yellow" class ="card yellow color-hidden"onclick = "onCardClicked(event)"></div>
+
+            <div  data-color = "blue" class ="card blue color-hidden" onclick = "onCardClicked(event)">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </div>
+
+            <div data-color = "orange" class ="card orange color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-chrome" aria-hidden="true"></i>
+            </div>
+
+            <div data-color = "pink" class ="card pink color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-dribbble" aria-hidden="true"></i>
+            </div>
+
+            <div data-color = "red" class ="card red color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+            </div>
+        
+            <div data-color = "red" class ="card red color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+            </div>
+
+            <div data-color = "green" class ="card green color-hidden"onclick = "onCardClicked(event)" >
+                <i class="fa fa-codepen" aria-hidden="true"></i>
+            </div>
+
+            <div data-color = "yellow" class ="card yellow color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-apple" aria-hidden="true"></i>
+            </div>
+
+            <div data-color = "orange" class ="card orange color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-chrome" aria-hidden="true"></i>
+            </div>
+        
+            <div data-color = "pink" class ="card pink color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-dribbble" aria-hidden="true"></i>
+            </div>
+            <div data-color = "blue" class ="card blue color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </div>
+
+            <div data-color = "yellow" class ="card yellow color-hidden"onclick = "onCardClicked(event)">
+                <i class="fa fa-apple" aria-hidden="true"></i>
+            </div>
             <div data-color = "green" class ="card green color-hidden"onclick = "onCardClicked(event)"></div>
+            <i class="fa fa-codepen" aria-hidden="true"></i>
+            
         </div>
     </div>
     
