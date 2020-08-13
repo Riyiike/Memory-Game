@@ -8,21 +8,42 @@
     padding :50px;
     text-align: center;
 }
+
+.wrapper{
+    width:50%;
+    margin:auto;
+    background: #ffffff;;
+}
 .card-1{
-    text-align :center
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap : 30px 70px;
+    background-color: #2196F3;
+    padding: 20px;
+    /* max-width: 80%; */
+    /* width: 1500px; */
+     justify-content: center;
+    align-items: center;
+    text-align :center; 
+    margin: 2rem;
+    border: 5px solid black;
+    border-radius: 5px;
 }
 
 .card {
-    display:inline-block;
-    width:100px;
-    height:100px;
-    background-color: pink;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
     cursor: pointer;
 }
 
 .card:hover{
-    box-shadow: black;
-}
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    transition: ease-in-out;
+}   
 
 .red{
 background-color: red;
