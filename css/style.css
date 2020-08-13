@@ -20,9 +20,7 @@
     grid-gap : 30px 70px;
     background-color: #2196F3;
     padding: 20px;
-    /* max-width: 80%; */
-    /* width: 1500px; */
-     justify-content: center;
+    justify-content: center;
     align-items: center;
     text-align :center; 
     margin: 2rem;
@@ -31,10 +29,9 @@
 }
 
 .card {
-    /* background-color: rgba(255, 255, 255, 0.8); */
-    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 50px;
-    font-size: 20px;
+    font-size: 0px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -45,37 +42,59 @@
     transition: ease-in-out;
 }   
 
-.red{
-background-color: red;
+.card .clicked {
+    transform: rotateY(0);
+    animation-duration: .70s;
+    /* background: #1981f8; */
+    background-color: brown;
+	cursor: default;
+	animation-name: flipInY;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
 }
 
-.blue{
-    background-color: blue;
+.card.view {
+	font-size: 33px;
 }
 
-.pink{
-    background-color: pink;
-}
-
-.yellow{
-    background-color:yellow;
-}
-.green{
-    background-color: green;
-}
-
-.orange{
-    background-color: orange;
-}
-
-.color-hidden{
+/* .card.disabled {
+	pointer-events: none;
+	opacity: 0.9;
+} */
+/* .color-hidden{
     background-color: #eeee;
     /* display: hidden; */
-}
-.card.done{
+/* } */ 
+/* .card.done{
     cursor:default;
-}
+} */
 
-.card.done:hover{
+/* .card.done:hover{
     cursor: default;
+} */
+
+@keyframes flipInY {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		transform: perspective(400px);
+	}
 }
