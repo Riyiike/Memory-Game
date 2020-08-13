@@ -8,8 +8,7 @@ const  colors = [
     'red',
     'green',
     'blue',
-    'orange',
-    
+    'orange', 
 ]
 
 // When i click on a card callback this function
