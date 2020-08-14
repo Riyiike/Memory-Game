@@ -8,11 +8,15 @@ body {
 	background: #ffffff;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 16px;
+    width:100%;
 }
 	
 .wrapper{
     background: #ffffff;;
-    width:60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -24,22 +28,36 @@ body {
 }
 /* CARD-CONTAINER */
 
-.card-container {
-    
-	display: grid;
+/* .card-container {
+    max-width:80%;
+	/* display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap : 30px 70px;
+    grid-gap : 20px 50px; */
     /* display: flex; 
-	flex-wrap: wrap; */
+	flex-wrap: wrap;
     background-color: #2196F3;
-    padding: 20px;
-    justify-content: center;
+    padding: 1rem;
+    justify-content:space-around;
     align-items: center;
     text-align :center; 
-    margin: 2rem;
+    margin: 0 0 3em;
     border: 5px solid black;
+    border-radius: 5px; */
+/* }  */
+
+.card-container{
+	max-width: 85%;
+    background-color: #2196F3;
+	padding: 1rem;
     border-radius: 5px;
+    border: 5px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 0 3em;
 }
+
 
 .card {
 	border-radius: 5px;
@@ -49,7 +67,7 @@ body {
     height: 3.7rem;
 	width: 3.7rem;
 	margin: 0.3rem;
-    padding: 50px;
+    padding: 30px;
     display: flex;
     font-size: 0px;
     border-radius: 5px;
