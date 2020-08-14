@@ -1,0 +1,35 @@
+
+@media (max-width: 320px) {
+	.card-container {
+		width: 85%;
+	}
+
+	.card-container .card {
+		height: 4.7rem;
+		width: 4.7rem;
+	}
+}
+
+
+/* For Tablets and larger screens
+****************/
+
+@media (min-width: 768px) {
+	.container {
+		font-size: 22px;
+	}
+
+	.card-container {
+		width: 660px;
+		height: 680px;
+	}
+
+	.card-container .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.popup {
+		width: 60%;
+	}
+}

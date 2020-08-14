@@ -1,23 +1,36 @@
 *{
-    box-sizing:border-box;
+    box-sizing: border-box;
     margin:0;
     padding:0;
 }
 
-.heading{
-    padding :50px;
-    text-align: center;
+body {
+	background: #ffffff;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16px;
+}
+	
+.wrapper{
+    background: #ffffff;;
+    width:60%;
 }
 
-.wrapper{
-    width:50%;
-    margin:auto;
-    background: #ffffff;;
+
+
+.heading{
+    padding :30px;
+    align-items: center;
+    text-align: center;
 }
-.card-1{
-    display: grid;
+/* CARD-CONTAINER */
+
+.card-container {
+    
+	display: grid;
     grid-template-columns: auto auto auto;
     grid-gap : 30px 70px;
+    /* display: flex; 
+	flex-wrap: wrap; */
     background-color: #2196F3;
     padding: 20px;
     justify-content: center;
@@ -29,50 +42,185 @@
 }
 
 .card {
+	border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+    height: 3.7rem;
+	width: 3.7rem;
+	margin: 0.3rem;
     padding: 50px;
+    display: flex;
     font-size: 0px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
 }
 
-.card:hover{
-    border: 2px solid rgba(0, 0, 0, 0.8);
-    transition: ease-in-out;
-}   
-
-.card .clicked {
-    transform: rotateY(0);
-    animation-duration: .70s;
-    /* background: #1981f8; */
-    background-color: brown;
+.card.open {
+	transform: rotateY(0);
+	background: #02b3e4;
 	cursor: default;
 	animation-name: flipInY;
 	-webkit-backface-visibility: visible !important;
 	backface-visibility: visible !important;
+	animation-duration: .75s;
 }
 
-.card.view {
+ .card.show {
 	font-size: 33px;
 }
 
-/* .card.disabled {
+.card.match {
+	cursor: default;
+	background: #c5f005c9;
+	font-size: 33px;
+	animation-name: rubberBand;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+}
+
+ .card.unmatched {
+	animation-name: pulse;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+	background: #e2043b;
+}
+
+ .card.disabled {
 	pointer-events: none;
 	opacity: 0.9;
-} */
-/* .color-hidden{
-    background-color: #eeee;
-    /* display: hidden; */
-/* } */ 
-/* .card.done{
-    cursor:default;
-} */
+}
 
-/* .card.done:hover{
-    cursor: default;
-} */
 
+/* SCOREBOARD */
+
+
+.score-board {
+	text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.score-board .stars {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+.score-board .stars li {
+	list-style: none;
+	display: inline-block;
+}
+
+.score-panel .restart {
+	float: right;
+	cursor: pointer;
+}
+
+.score-panel .start-game{
+    padding:10px;
+    background-color:#02b3e4; 
+    font-size: 0;
+}
+.fa-star {
+	color: #FFD700;
+}
+
+.timer {
+	display: inline-block;
+	margin: 0 1rem;
+}
+
+
+/* YOU WON MODAL */
+
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+  
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 5px;
+	width: 85%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+  
+.popup h2 {
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+#starRating li {
+	display: inline-block;
+}
+
+#play-again {
+	background-color: #141214;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #ffffff;
+	border-radius: 5px;
+}
+
+
+
+
+
+/* animations */
 @keyframes flipInY {
 	from {
 		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
@@ -96,5 +244,87 @@
 
 	to {
 		transform: perspective(400px);
+	}
+}
+
+@keyframes rubberBand {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, .95, 1);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+/* MEDIA QUERIES */
+
+
+@media (max-width: 320px) {
+	.card-container {
+		width: 85%;
+	}
+
+	.card-container .card {
+		height: 4.7rem;
+		width: 4.7rem;
+	}
+}
+
+
+/* For Tablets and larger screens
+****************/
+
+@media (min-width: 768px) {
+	.container {
+		font-size: 22px;
+	}
+
+	.card-container {
+		width: 660px;
+		height: 680px;
+	}
+
+	.card-container .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.popup {
+		width: 60%;
 	}
 }

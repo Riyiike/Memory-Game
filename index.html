@@ -1,93 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <title>Mix-Match Memory Game </title>
-    <link rel ="stylesheet" href ="./css/style.css"/>
+    <meta charset="utf-8">
+    <title>Click-Match Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- GOOGLE FONT -->
+     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class ="wrapper">
-        
+
+    <div class="wrapper">
+        <!-- GAME TITLE -->
         <h1 class ="heading">
             CLICK-MATCH MEMORY GAME!!
         </h1>
 
-        <section class="score-panel">
+        <section class="score-board">
         	<ul class="stars">
         		<li><i class="fa fa-star"></i></li>
         		<li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="Clicks ">0</span> Click(s)
+        	<span class="moves">0</span> Move(s)
 
             <div class="timer">
             </div>
+
+            <!-- <btn class="start-game" onclick=startGame()> START</btn> -->
 
             <div class="restart" onclick=startGame()>
         		<i class="fa fa-repeat"></i>
         	</div>
         </section>
+        <!-- CARD CONTAINER -->
+        <div class="card-container" id="card-deck">
 
-
-        <div class ="card-1">
-
-            <div class ="card github" >
+            <li class="card" type="github">
                 <i class="fa fa-github" aria-hidden="true"></i>
-            </div>
-
-            <div class ="card chrome">
-                <i class="fa fa-chrome" aria-hidden="true"></i>
-            </div>
-
-            <div  class ="card dribble">
+            </li>
+            <li class="card" type="chrome">
+                 <i class="fa fa-chrome" aria-hidden="true"></i>
+            </li>
+            <li class="card match" type="dribble">
                 <i class="fa fa-dribbble" aria-hidden="true"></i>
-            </div>
-
-            <div class ="card staackoverflow">
+            </li>
+            <li class="card" type="stack-overflow" >
                 <i class="fa fa-stack-overflow" aria-hidden="true"></i>
-            </div>
-        
-            <div class ="cardstackoverflow ">
-                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
-            </div>
-
-            <div class ="card codepen">
+            </li>
+            <li class="card" type="codepen">
                 <i class="fa fa-codepen" aria-hidden="true"></i>
-            </div>
-
-            <div class ="card apple">
+            </li>
+            <li class="card match" type="apple">
                 <i class="fa fa-apple" aria-hidden="true"></i>
-            </div>
-
-            <div class ="card chrome">
-                <i class="fa fa-chrome" aria-hidden="true"></i>
-            </div>
-        
-            <div class ="card dribble">
-                <i class="fa fa-dribbble" aria-hidden="true"></i>
-            </div>
-            <div class ="card github ">
+            </li>
+            <li class="card" type="github">
                 <i class="fa fa-github" aria-hidden="true"></i>
-            </div>
-
-            <div class ="card apple">
-                <i class="fa fa-apple" aria-hidden="true"></i>
-            </div>
-            <div class ="card codepen ">
+            </li>
+            <li class="card match" type="dribble">
+                <i class="fa fa-dribbble" aria-hidden="true"></i>
+            </li>
+            <li class="card" type="stack-overflow" >
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+            </li>
+            <li class="card" type="chrome">
+                <i class="fa fa-chrome" aria-hidden="true"></i>
+           </li>
+           <li class="card match" type="apple">
+            <i class="fa fa-apple" aria-hidden="true"></i>
+            </li>
+            <li class="card" type="codepen">
                 <i class="fa fa-codepen" aria-hidden="true"></i>
-            </div>
-            
-
+            </li>
         </div>
-    </div>
-    
-    <!-- <script src= "index.js"></script> -->
-    <script src= "index2.js"></script>
-</body>
 
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Yippie 🎉</h2>
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    You won 🎉🎉
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                    <p>Rating:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="TryAgain()">
+                    Play again 😄</a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- JS -->
+    <script src="./index2.js"></script>
+</body>
 </html>
