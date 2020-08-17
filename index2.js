@@ -8,13 +8,7 @@ let cards = [...card];
 
 // loop through all the cards
 
-// loop to add event listeners to each card
-for (var i = 0; i < cards.length; i++){
-    card = cards[i];
-    card.addEventListener("click", displayCard);
-    card.addEventListener("click", cardOpen);
-    card.addEventListener("click",congratulations);
-};
+
 
 
 // loop through all the cards
@@ -24,6 +18,13 @@ for (var i = 0; i < cards.length; i++){
 //     card.addEventListener('click',displayCard)
 // }
 
+// // loop to add event listeners to each card
+// for (var i = 0; i < cards.length; i++){
+//     card = cards[i];
+//     card.addEventListener("click", displayCard);
+//     card.addEventListener("click", cardOpen);
+//     card.addEventListener("click",congratulations);
+// };
 
 // VIEWING CLICKED CARDS
 
@@ -35,7 +36,7 @@ function displayCard () {
 };
 
 
-// @description add opened cards to OpenedCards list and check if cards are match or not
+//  add opened cards to OpenedCards list and check if cards are match or not
 function cardOpen() {
     openedCards.push(this);
     var len = openedCards.length;
@@ -233,7 +234,7 @@ function startTimer(){
 
 //Congratulations when all cards match, show modal and moves, time and rating
 function congratulations(){
-    if (matchedCard.length == 16){
+    if (matchedCard.length == 12){
         clearInterval(interval);
         finalTime = timer.innerHTML;
 
@@ -270,3 +271,10 @@ function playAgain(){
 }
 
 
+// loop to add event listeners to each card
+for (var i = 0; i < cards.length; i++){
+    card = cards[i];
+    card.addEventListener("click", displayCard);
+    card.addEventListener("click", cardOpen);
+    card.addEventListener("click",congratulations);
+};
